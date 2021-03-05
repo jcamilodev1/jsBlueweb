@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAwerRNsp96i7ynXDvAI2OH1SeAuqedCfw",
+      authDomain: "usuarios-d364f.firebaseapp.com",
+      projectId: "usuarios-d364f",
+      storageBucket: "usuarios-d364f.appspot.com",
+      messagingSenderId: "346169493827",
+      appId: "1:346169493827:web:48a7d4677c6fb394dec7f6",
+      measurementId: "G-42X3LMLR02"
+    };
+  // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="container mt-3">
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand">NAV</a>
+        <div class="d-flex">
+          <input id="email2" type="email"class="form-control form-control-sm me-2" placeholder="Ingresa email">
+          <input id="contraseña2"class="form-control form-control-sm me-2" type="password" placeholder="Ingresa contraseña" >
+          <button class="btn btn-success btn-sm" onclick="ingresar()">Acceder</button>
+          <button class="btn btn-danger btn-sm  " data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar</button>
+        </div>
+      </div>
+    </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registro de usuarios</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input id="email" type="email" class="form-control form-control-sm me-2" placeholder="Ingresa email">
+        <input id="contraseña" type="password" class="form-control form-control-sm me-2 mt-3" placeholder="Ingresa contraseña" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="registrar()">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+  <!-- HTML SIN BOOTSRATP -->
+  <h4>Registro de usuarios</h4>
+  <input id="email" type="email" placeholder="Ingresa email">
+  <input id="contraseña" type="password" placeholder="Ingresa contraseña" >
+  <button onclick="registrar()">Enviar</button>
+  <h4>Ingreso de usuarios</h4>
+  <input id="email2" type="email" placeholder="Ingresa email">
+  <input id="contraseña2" type="password" placeholder="Ingresa contraseña" >
+  <button onclick="ingresar()">Acceder</button>
+  
+  <div id="contenido">
+    
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

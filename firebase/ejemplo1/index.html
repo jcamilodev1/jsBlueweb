@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAwerRNsp96i7ynXDvAI2OH1SeAuqedCfw",
+    authDomain: "usuarios-d364f.firebaseapp.com",
+    projectId: "usuarios-d364f",
+    storageBucket: "usuarios-d364f.appspot.com",
+    messagingSenderId: "346169493827",
+    appId: "1:346169493827:web:48a7d4677c6fb394dec7f6",
+    measurementId: "G-42X3LMLR02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+</head>
+<body>
+  <h4>Registro de usuarios</h4>
+  <input id="email" type="email" placeholder="Ingresa email">
+  <input id="contraseña" type="password" placeholder="Ingresa contraseña" >
+  <button onclick="registrar()">Enviar</button>
+  <h4>Ingreso de usuarios</h4>
+  <input id="email2" type="email" placeholder="Ingresa email">
+  <input id="contraseña2" type="password" placeholder="Ingresa contraseña" >
+  <button onclick="ingresar()">Acceder</button>
+  
+  <div id="contenido">
+    
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
